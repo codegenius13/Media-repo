@@ -1,0 +1,3605 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: black;
+}
+img {
+    width: 300px;
+    height: 300px;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* HEADER SECTION */
+.header-nav {
+    width: 100%;
+    z-index: 6;
+    transition: all 500ms ease-in-out;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    scroll-padding-top: 4rem;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(201, 198, 198);
+}
+.sticky + ::content {
+    padding-top: 102px;
+}
+.header-logo nav {
+    display: flex;
+    float: right;
+    margin-right: 30px;
+}
+#logo {
+    margin-top: -10px;
+    margin-left: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.header-logo .logo  {
+    display: flex;
+    float: left;
+}
+.header-logo .logo  h1 {
+    color: black;
+    text-decoration: none;
+    margin-top: 30px;
+}
+.header-logo .logo:hover  {
+    text-decoration: none;
+}
+.header-logo ul {
+    display: flex;
+    margin-top: 40px;
+    margin-right: 40px;
+    font-size: 18px;
+    transition: all linear 0.5s;
+}
+.header-logo ul li  a{
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+}
+.header-logo ul li a:hover {
+    border-bottom: 3px solid black;
+    transition: 1s;
+}
+.header-logo ul li a.active {
+    border-bottom: 3px solid black;
+    transition: 1s;
+}
+.header-logo ul li .links3.active2 {
+    color: rgb(201, 198, 198);
+    transition: 1s;
+}
+.icons {
+    display: flex;
+}
+.icons a img {
+    width: 60px;
+    height: 40px;
+    margin-top: 30px;
+    padding-right: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+.icons a img:hover {
+    transform: translateY(-20px);
+    transition: 1s;
+}
+.toggle {
+    display: none;
+    float: right;
+    margin-top: 35px;
+    font-size: 25px;
+}
+.toggle i.open {
+    display: block;
+}
+.toggle i.close {
+    display: none;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.contact {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.452);
+    z-index: 1000;
+}
+.wrapper {
+    position: relative;
+    width: 350px;
+    height: 470px;
+    top: 20%;
+    left: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+.wrapper .form-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.wrapper .form-title img {
+    width: 70px;
+    height: 70px;
+}
+.wrapper .form-title i {
+    font-size: 20px;
+    margin-top: 20px;
+}
+.wrapper form {
+    margin: 5px 30px;
+}
+.field {
+    height: 50px;
+    width: calc(100% / 2 - 13px);
+}
+form .field input {
+    height: 40px;
+    width: 280px;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+form .message {
+    position: relative;
+}
+form .message textarea{
+    width: 280px;
+    font-size: 18px;
+    padding: 10px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+form .field input:focus, 
+form .message textarea:focus {
+    border: 2px solid silver;
+}
+form .button-area button {
+    margin: 10px 0;
+    align-items: center;
+}
+.button-area {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.button-area button {
+    font-size: 17px;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button-area button:hover {
+    color: black;
+    background-color: rgb(201, 198, 198);
+    transition: .6s;
+}
+.button-area span {
+    display: none;
+    color: black;
+    margin-top: 15px;
+}
+/*  END CONTACT FORM */
+
+/** REAVEAL ONSCROLL **/
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all .7s ease;
+}
+.reveal-two {
+    left: 0;
+    opacity: 0;
+}
+.reveal-two.active {
+    left: 0px;
+    opacity: 1;
+    transition: all .7s ease;
+}
+/** END REVEAL ONSCROLL **/ 
+
+/** CALL BUTTON **/
+#myBtn {
+    display: none;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    outline: none;
+    background-color: rgb(201, 198, 198);
+    box-shadow: 0 1px 5px 1px black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    margin-top: -10px;
+    margin-right: 10px;
+    border: transparent;
+}
+#myBtn i {
+    color: black;
+}
+#myBtn:hover {
+    background-color: grey;
+    transition: .9s;
+}
+/** END CALL BUTTON **/
+
+/* HOME SECTION */
+.describe {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.describe-text {
+    margin-top: 50px;
+    margin-left: 60px;
+    display: block;
+}
+.describe-text h1 {
+    font-size: 5.5vw;
+    margin-bottom: 30px;
+}
+.describe-text p {
+    font-size: 22px;
+}
+.describe img {
+    width: 700px;
+    height: 700px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.button-go {
+    margin-top: 30px;
+    display: flex;
+}
+#started {
+    width: 150px;
+    height: 40px;
+    margin-right: 5px;
+    color: white;
+    background-color: black;
+}
+#demo {
+    width: 150px;
+    height: 40px;
+    margin-left: 5px;
+    color: white;
+    background-color: black;
+}
+.describe-two {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+.describe-text-two {
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: block;
+}
+.describe-text-two h1 {
+    font-size: 5.5vw;
+    margin-bottom: 30px;
+}
+.describe-text-two p {
+    font-size: 22px;
+}
+.describe-two img {
+    width: 550px;
+    height: 500px;
+    margin-left: 50px;
+}
+.describe-part {
+    display: none;
+    padding-top: 150px;
+}
+/* END HOME SECTION */
+
+/* ABOUT SECTION */
+#about h1 {
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#about p {
+    text-align: center;
+    font-size: 20px;
+}
+.about {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+.about h1 {
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 150px;
+    font-size: 4em;
+}
+.services {
+    margin-top: 100px;
+    display: block;
+    text-align: left;
+    margin-left: 270px;
+}
+.serve {
+    display: block;
+}
+.serve p {
+    margin-left: 55px;
+    font-size: 20px;
+}
+.services-type {
+    display: flex;
+}
+.services-type h3 {
+    text-transform: uppercase;
+}
+.services-type img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+#listen {
+    padding: 0;
+}
+#listen article {
+    padding: 20px;
+}
+#listen article:first-of-type {
+    background: black;
+    color: white;
+}
+#listen article button{
+    background-color: white;
+}
+#listen article button a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+#listen h2 {
+    color: white;
+}
+#listen blockquote {
+    font-size: 28px;
+    line-height: 1.3em;
+}
+#listen blockquote {
+    text-indent: -.4em;
+}
+#listen blockquote footer {
+    margin: 0;
+    font-size: .6em;
+}
+#listen blockquote footer span {
+    color: var(--firey-rose);
+}
+#rotator blockquote {
+    display: none;
+}
+/* END ABOUT SECTION */
+
+/* OUR PROJECTS SECTION */
+#our-projects {
+    margin-bottom: 100px;
+}
+.work .selected {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.selected h1 {
+    text-transform: uppercase;
+    font-size: 5vw;
+    margin-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.selected h1:nth-child(2),
+.selected h1:nth-child(4),
+.selected h1:nth-child(6),
+.selected h1:nth-child(8),
+.selected h1:nth-child(10),
+.selected h1:nth-child(12),
+.selected h1:nth-child(14),
+.selected h1:nth-child(16){
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+}
+/* END OUR PROJECTS SECTION */
+
+/* HOW IT WORKS SECTION */
+#how-it-works {
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+.work-title h1 {
+    font-size: 4em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+.work-category {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+.work-type {
+    display: block;
+    justify-content: left;
+}
+.work-type span {
+    padding: 10px 10px 10px 20px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.work-type h2 {
+    font-weight: 600;
+    font-size: 30px;
+}
+.work-type p {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.work-btn {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: black;
+}
+.work-img {
+    display: flex;
+}
+.work-img img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.work-btn:hover {
+    background-color: black;
+    color: white;
+    transition: .7s;
+}
+.work-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    border: 1px solid black;
+    width: 97%;
+    height: 100%;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+.work-section-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: block;
+    margin-right: 40px;
+}
+.work-section-text p {
+    font-size: 20px;
+}
+.work-section-text:nth-child(1) {
+    margin-left: 50px;
+}
+.work-section-text:nth-child(3) {
+    margin-right: 50px;
+}
+.connect {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    margin-top: 20px;
+}
+.connect-text {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+}
+.connect-text h1 {
+    font-size: 3em;
+}
+.work-btn-two {
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+}
+.work-btn-two:hover {
+    background-color: white;
+    color: black;
+    transition: .7s;
+}
+/* END HOW IT WORKS SECTION */
+
+/* BENEFITS SECTION */
+#benefits {
+    margin-bottom: 200px;
+}
+#reason h1:nth-child(1) {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    opacity: .8;
+}
+#reason h1:nth-child(2){
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.categories {
+    overflow: hidden;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 120px;
+    margin-bottom: 50px;
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 230px;
+    background-color: black;
+    margin-bottom: 60px;
+}
+.card-text {
+    position: absolute;
+    color: white;
+    padding: 10px 50px;
+    display: block;
+}
+.content {
+    display: block;
+    text-align: left;
+    justify-content: left;
+    margin-left: 50px;
+}
+.content-num {
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+}
+.content-num span {
+    padding: 10px 10px 10px 20px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.content-num p {
+    margin-top: 5px;
+    font-size: 23px;
+    margin-right: 20px;
+}
+/* END BENEFITS SECTION */
+
+/* FAQS SECTION */
+#faqs {
+    margin-bottom: 50px;
+}
+.questions {
+    text-align: center;
+}
+.questions h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+.answers-sec {
+    display: block;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.answers {
+    display: flex;
+    justify-content: space-between;
+}
+.answers p {
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin-top: -5px;
+}
+.answers span {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 100px;
+}
+/* END FAQS SECTION */
+
+/* HIRE ME FORM */
+.form-tile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(201, 198, 198, 0.39);
+}
+.form-section {
+    position: relative;
+    width: 800px;
+    height: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.329);
+    background-color: white;
+}
+.form-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.form-logo img {
+    width: 150px;
+    height: 150px;
+}
+.process {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    font-size: 25px;
+}
+.form-input {
+    display: flex;
+    justify-content: space-between;
+}
+.input-section {
+    margin-top: 30px;
+}
+.input-section input{
+    width: 330px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.input-section input:focus {
+    border: 2px solid rgb(201, 198, 198);
+}
+.input-section select {
+    width: 330px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.input-section textarea {
+    width: 670px;
+    height: 130px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.hire-submit {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.hire-submit input {
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+}
+.hire-submit input:hover {
+    background-color: white;
+    color: black;
+    transition: .6s;
+}
+#service {
+    width: 670px;
+}
+.error{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    width: 700px;
+    margin: auto;
+    height: 70px;
+    padding: 20px;
+}
+/* END HIRE ME FORM*/
+
+/* END BODY SECTION */
+
+/* FOOTER SECTION */
+.panel-footer {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 0;
+    box-shadow: 0px 1px 5px 1px rgb(201, 198, 198);
+    overflow: hidden;
+    font-size: 20px;
+}
+.footer-sec {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 150px;
+}
+#logo-two {
+    width: 100px;
+    height: 100px;
+}
+.footer-categories {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 50px;
+}
+.footer-categories ul li a {
+    color: black;
+    line-height: 50px;
+    text-decoration: none;
+}
+.footer-categories ul:nth-child(1) {
+    margin-left: 20px;
+}
+.owner {
+    display: block;
+}
+.owner-info {
+    display: flex;
+}
+#owner {
+    width: 50px;
+    height: 50px;
+}
+.owner-text {
+    display: block;
+    margin-top: 10px;
+}
+.owner-text p:nth-child(1) {
+    font-size: 14px;
+}
+.owner-text p:nth-child(2) {
+    margin-top: -10px;
+}
+.mail {
+    margin-left: 50px;
+}
+.mail a {
+    color: black;
+    text-decoration: underline;
+}
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.copyright p:nth-child(2) {
+    margin-right: 70px;
+}
+.copyright p:nth-child(2) a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Sevillana', cursive;
+}
+/* END FOOTER SCETION */
+
+/*** MEDIA DEVICES ****/
+
+/*** LARGE DEVICES ****/
+
+/* Laptop Devices */
+@media (min-width: 1200px) {
+/* BODY SETION */
+
+/** ABOUT SECTION **/
+.serve:nth-child(1){
+    transform: translateX(-100px);
+}
+.serve:nth-child(4){
+    transform: translateX(-100px);
+}
+.serve:nth-child(2){
+    transform: translateX(-20px);
+}
+.serve:nth-child(3){
+    transform: translateX(-20px);
+}
+#listen {
+    display: flex;
+    margin-bottom: 50px;
+}
+#listen article:first-of-type {
+    flex: 1;
+    padding: 50px;
+}
+#listen article:last-of-type {
+    flex: 4;
+}
+#listen blockquote {
+    font-size: 48px;
+    padding: 30px;
+}
+/** END ABOUT SECTION **/
+
+/* END BODY SECTION */
+
+}
+/**** END LARGE DEVICES *****/
+
+/***** MEDIUM DEVICES ****/
+
+/* ipad pro */
+@media(min-width: 992px) and (max-width: 1199px) {
+/* HEADER SECTION */
+#logo {
+    width: 120px;
+    height: 120px;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+.header-logo ul {
+    margin-top: 40px;
+}
+.header-logo ul li a {
+    padding: 13px;
+}
+.icons {
+    margin-right: 40px;
+    margin-top: 5px;
+}
+.icons a img {
+    width: 50px;
+    padding-right: 10px;
+}
+/* END HEADER SECTION */   
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 35%;
+}
+/* END CONTACT FORM */
+
+/** HOME SECTION **/
+.describe img {
+    width: 600px;
+    height: 600px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.describe-text h1 {
+    font-size: 5.9vw;
+}
+.describe-text {
+    margin-top: 80px;
+}
+.describe-two img {
+    width: 500px;
+    height: 400px;
+    margin-right: 50px;
+    margin-top: 120px;
+}
+.describe-text-two h1 {
+    font-size: 5.9vw;
+}
+.describe-text-two {
+    margin-top: 130px;
+}
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+.services {
+    margin-left: 200px;
+}
+.about h1 {
+    margin-left: 120px;
+}
+.serve:nth-child(1){
+    transform: translateX(-100px);
+}
+.serve:nth-child(4){
+    transform: translateX(-100px);
+}
+.serve:nth-child(2){
+    transform: translateX(-20px);
+}
+.serve:nth-child(3){
+    transform: translateX(-20px);
+}
+#listen {
+    display: flex;
+    margin-bottom: 50px;
+}
+#listen article:first-of-type {
+    flex: 1;
+}
+#listen article:last-of-type {
+    flex: 4;
+}
+#listen blockquote {
+    font-size: 36px;
+}
+/** END ABOUT SECTION **/
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 135px;
+}
+/** END BENEFITS SECTION **/
+
+/* END BODY SECTION */
+}
+/***** END MEDIUM DEVICES ***/
+
+/***** SMALL DEVICES *****/
+
+/* Surface 7 pro */
+@media(min-width: 912px) and (max-width: 991px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 100px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 30%;
+}
+/* END CONTACT FORM */
+
+/** HOME SECTION */
+.describe img {
+    width: 500px;
+    height: 500px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.describe-text h1 {
+    font-size: 6.2vw;
+}
+.describe-text {
+    margin-top: 60px;
+}
+.describe-two img {
+    width: 400px;
+    height: 300px;
+    margin-right: 50px;
+    margin-top: 120px;
+}
+.describe-text-two h1 {
+    font-size: 6.2vw;
+}
+.describe-text-two {
+    margin-top: 140px;
+}
+/** END HOME SECTION */
+
+/** ABOUT SECTION */
+.about h1 {
+    margin-left: 100px;
+}
+.services {
+    margin-left: 230px;
+}
+/** END ABOUT SECTION  **/
+
+/** HOW IT WORKS **/
+.work-title {
+    margin-left: -15px;
+}
+.work-category {
+    margin-left: 30px;
+}
+/** END HOW IT WORKS */
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 100px;
+}
+/** END BENEFITS SECTION **/
+
+/* END BODY SECTION */
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-right: 100px;
+}
+/** END FOOTER SECTION **/
+
+}
+/* ipad Air */
+@media(min-width: 820px) and (max-width: 911px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 100px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 30%;
+}
+/* END CONTACT FORM */
+
+/** HOME SECTION **/
+.describe img {
+    width: 430px;
+    height: 430px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.describe-text h1 {
+    font-size: 5.5vw;
+}
+.describe-text {
+    margin-top: 60px;
+    margin-left: 40px;
+}
+.describe-two img {
+    width: 400px;
+    height: 300px;
+    margin-right: 50px;
+    margin-top: 120px;
+}
+.describe-text-two h1 {
+    font-size: 5.5vw;
+}
+.describe-text-two {
+    margin-top: 130px;
+    margin-left: 40px;
+}
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+.about h1 {
+    margin-left: 100px;
+}
+.services {
+    margin-left: 200px;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS **/
+.work-title {
+    margin-left: -15px;
+}
+.work-category {
+    margin-left: 30px;
+}
+/** END HOW IT WORKS */
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 100px;
+}
+/** END BENEFITS SECTION **/
+
+/* END BODY SECTION */
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-right: 100px;
+}
+/** END FOOTER SECTION **/
+
+}
+/* ipad Mini */
+@media(min-width: 768px) and (max-width: 819px){
+/* HEADER SECTION */
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 100px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 30%;
+}
+/* END CONTACT FORM */
+
+/** HOME SECTION */
+.describe img {
+    width: 400px;
+    height: 400px;
+    margin-right: 70px;
+    margin-top: 20px;
+}
+.describe-text h1 {
+    font-size: 5.3vw;
+}
+.describe-text {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.describe-two img {
+    width: 350px;
+    height: 250px;
+    margin-right: 70px;
+    margin-top: 120px;
+}
+.describe-text-two h1 {
+    font-size: 5.3vw;
+}
+.describe-text-two {
+    margin-top: 130px;
+    margin-left: 30px;
+}
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+.about h1 {
+    margin-left: 70px;
+}
+.services {
+    margin-left: 170px;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS **/
+.work-title {
+    margin-left: -15px;
+}
+.work-category {
+    margin-left: 30px;
+}
+/** END HOW IT WORKS */
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 70px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 50px;
+}
+.answers p {
+    font-size: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION **/
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-right: 100px;
+}
+/** END FOOTER SECTION **/
+}
+/*** END SMALL DEVICES ****/
+
+/**** EXTRA SMALL DEVICES ****/
+@media(min-width: 713px) and (max-width: 767px) {
+/* HEADER SECTION */
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 100px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 25%;
+}
+/* END CONTACT FORM */
+
+/** HOME SECTION **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 40px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 370px;
+     height: 400px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: 10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-left: 10px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: 20px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-left: 120px;
+    margin-right: 80px;
+}
+.about {
+    overflow: hidden;
+}
+.about h1 {
+    margin-left: 20px;
+    font-size: 3em;
+}
+.services {
+    margin-left: 140px;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 4em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 50px;
+    width: 85%;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 150px;
+}
+.card {
+    width: 400px;
+}
+.card-text {
+    padding: 20px 50px;
+}
+.content {
+    margin-left: 20px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 50px;
+}
+.answers p {
+    font-size: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-left: 10px;
+}
+.footer-sec {
+    margin-right: 30px;
+}
+/** END FOOTER SECTION **/
+}
+/*** TAB DEVICES ***/
+
+/* Galaxy Tab S4 */
+@media(min-width: 641px) and (max-width: 712px){
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 100px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 23%;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 40px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 370px;
+     height: 400px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: 10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-left: 10px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: 20px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-left: 120px;
+    margin-right: 80px;
+}
+.about {
+    overflow: hidden;
+}
+.about h1 {
+    margin-left: 20px;
+    font-size: 3em;
+}
+.services {
+    margin-left: 100px;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 4em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 40px;
+    width: 85%;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 110px;
+}
+.card {
+    width: 400px;
+}
+.card-text {
+    padding: 20px 50px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+}
+.content-num p {
+    font-size: 17.5px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 50px;
+}
+.answers p {
+    font-size: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-left: 10px;
+}
+.footer-sec {
+    margin-right: 30px;
+}
+/** END FOOTER SECTION **/
+}
+/* Microsoft Lumia 550 */
+@media(min-width: 540px) and (max-width: 640px) {
+/* HEADER SECTION */
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 50px;
+}
+.header-logo .logo {
+    margin-left: -20px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 20%;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 40px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 370px;
+     height: 400px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: 10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-left: 10px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: 20px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-left: 120px;
+    margin-right: 80px;
+}
+.about {
+    overflow: hidden;
+}
+.about h1 {
+    margin-left: 20px;
+    font-size: 3em;
+}
+.services {
+    margin-left: 50px;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 4em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 100px;
+}
+.card {
+    width: 400px;
+}
+.card-text {
+    padding: 20px 50px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+}
+.content-num p {
+    font-size: 17.5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 50px;
+}
+.answers p {
+    font-size: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-left: 10px;
+}
+.footer-sec {
+    margin-right: 30px;
+}
+/** END FOOTER SECTION **/
+}
+/*** END TAB DEVICES ***/
+
+/*** ANDROID DEVICES ****/
+
+/* iphone 12 pro */
+@media(min-width: 384px) and (max-width: 440px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 50px;
+}
+.header-logo .logo {
+    margin-left: -25px;
+}
+#logo {
+    margin-top: -3px;
+    width: 100px;
+    height: 100px;
+} 
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 8%;
+    width: 300px;
+}
+form .field input {
+    height: 40px;
+    width: 230px;
+}
+form .message textarea {
+    width: 230px;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 340px;
+     height: 380px;
+     margin-left: 10px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6.5vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: -10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-right: 20px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: -10px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#about h1 {
+    font-size: 8vw;
+}
+.about h1 {
+    margin-left: 70px;
+    font-size: 2em;
+}
+.services-type h3 {
+    font-size: 30px;
+}
+.serve p {
+    font-size: 25px;
+}
+.services {
+    margin-left: 20px;
+}
+.about {
+    display: block;
+    text-align: center;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-type p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section h3 {
+    font-size: 30px;
+}
+.work-section p {
+    font-size: 25px;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+.connect h1 {
+    font-size: 1.8em;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+#reason h1:nth-child(2) {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.categories {
+    margin-left: 70px;
+}
+.card {
+    width: 250px;
+    height: 220px;
+}
+.card-text {
+    padding: 10px 20px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content p {
+    font-size: 25px;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 20px;
+}
+.answers p {
+    font-size: 25px;
+}
+.answers-sec a span {
+    margin-right: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/* FOOTER SECTION */
+#logo-two {
+    width: 200px;
+    height: 200px;
+    margin-left: -20px;
+}
+.footer-categories {
+    display: block;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -20px;
+}
+.footer-categories ul:nth-child(2) {
+    margin-left: 20px;
+}
+.owner {
+    margin-left: -30px;
+}
+.owner-text {
+    margin-left: 10px;
+}
+.owner-text p:nth-child(1) {
+    font-size: 25px;
+}
+.mail {
+    margin-left: -30px; 
+    display: flex;
+}
+.mail h4 {
+    font-size: 25px;
+}
+.mail a {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 23px;
+}
+.copyright {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.copyright p:nth-child(1) {
+    margin-right: -90px;
+    margin-left: -50px;
+}
+.copyright p:nth-child(2) {
+    margin-right: -90px;
+    margin-left: -50px;
+}
+/* END FOOTER SECTION */
+}
+/* iphone SE */
+@media(min-width: 361px) and (max-width: 383px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 50px;
+}
+.header-logo .logo {
+    margin-left: -25px;
+}
+#logo {
+    margin-top: -3px;
+    width: 100px;
+    height: 100px;
+} 
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 8%;
+    width: 300px;
+}
+form .field input {
+    height: 40px;
+    width: 230px;
+}
+form .message textarea {
+    width: 230px;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 340px;
+     height: 380px;
+     margin-left: 10px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6.5vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: -10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-right: 20px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: -10px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#about h1 {
+    font-size: 8vw;
+}
+.about h1 {
+    margin-left: 70px;
+    font-size: 2em;
+}
+.services-type h3 {
+    font-size: 30px;
+}
+.serve p {
+    font-size: 25px;
+}
+.services {
+    margin-left: 20px;
+}
+.about {
+    display: block;
+    text-align: center;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-type p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section h3 {
+    font-size: 30px;
+}
+.work-section p {
+    font-size: 25px;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+.connect h1 {
+    font-size: 1.8em;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+#reason h1:nth-child(2) {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.categories {
+    margin-left: 60px;
+}
+.card {
+    width: 250px;
+    height: 220px;
+}
+.card-text {
+    padding: 10px 20px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content p {
+    font-size: 25px;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 20px;
+}
+.answers p {
+    font-size: 25px;
+}
+.answers-sec a span {
+    margin-right: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/* FOOTER SECTION */
+#logo-two {
+    width: 200px;
+    height: 200px;
+    margin-left: -30px;
+}
+.footer-categories {
+    display: block;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -30px;
+}
+.footer-categories ul:nth-child(2) {
+    margin-left: 20px;
+}
+.owner {
+    margin-left: -30px;
+}
+.owner-text {
+    margin-left: 10px;
+}
+.owner-text p:nth-child(1) {
+    font-size: 25px;
+}
+.mail {
+    margin-left: -30px; 
+    display: flex;
+}
+.mail h4 {
+    font-size: 25px;
+}
+.mail a {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 23px;
+}
+.copyright {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.copyright p:nth-child(1) {
+    margin-right: -80px;
+    margin-left: -50px;
+}
+.copyright p:nth-child(2) {
+    margin-right: -80px;
+    margin-left: -50px;
+}
+/* END FOOTER SECTION */
+}
+/* Samsung Galaxy A51/71 */
+@media(min-width: 401px) and (max-width: 439px) {
+/* HEADER SECTION */
+
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 340px;
+     height: 380px;
+     margin-left: 10px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6.5vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: -10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-right: 20px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: -10px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#about h1 {
+    font-size: 8vw;
+}
+.about h1 {
+    margin-left: 70px;
+    font-size: 2em;
+}
+.services-type h3 {
+    font-size: 30px;
+}
+.serve p {
+    font-size: 25px;
+}
+.services {
+    margin-left: 20px;
+}
+.about {
+    display: block;
+    text-align: center;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-type p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section h3 {
+    font-size: 30px;
+}
+.work-section p {
+    font-size: 25px;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+.connect h1 {
+    font-size: 1.8em;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+#reason h1:nth-child(2) {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.categories {
+    margin-left: 70px;
+}
+.card {
+    width: 250px;
+    height: 220px;
+}
+.card-text {
+    padding: 10px 20px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content p {
+    font-size: 25px;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 20px;
+}
+.answers p {
+    font-size: 25px;
+}
+.answers-sec a span {
+    margin-right: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/* FOOTER SECTION */
+#logo-two {
+    width: 200px;
+    height: 200px;
+    margin-left: -20px;
+}
+.footer-categories {
+    display: block;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -20px;
+}
+.footer-categories ul:nth-child(2) {
+    margin-left: 20px;
+}
+.owner {
+    margin-left: -30px;
+}
+.owner-text {
+    margin-left: 10px;
+}
+.owner-text p:nth-child(1) {
+    font-size: 25px;
+}
+.mail {
+    margin-left: -30px; 
+    display: flex;
+}
+.mail h4 {
+    font-size: 25px;
+}
+.mail a {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 23px;
+}
+.copyright {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.copyright p:nth-child(1) {
+    margin-right: -90px;
+    margin-left: -50px;
+}
+.copyright p:nth-child(2) {
+    margin-right: -90px;
+    margin-left: -50px;
+}
+/* END FOOTER SECTION */
+
+}
+@media(min-width: 440px) and (max-width: 539px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 50px;
+}
+.header-logo .logo {
+    margin-left: -20px;
+}
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 10%;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 340px;
+     height: 380px;
+     margin-left: 10px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6.5vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: -10px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 10px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-right: 20px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: -10px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-left: 50px;
+    margin-right: 80px;
+}
+.about {
+    overflow: hidden;
+}
+.about h1 {
+    margin-left: 20px;
+    font-size: 2em;
+}
+.services {
+    margin-left: 50px;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+.categories {
+    margin-left: 40px;
+}
+.card {
+    width: 400px;
+}
+.card-text {
+    padding: 20px 50px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+}
+.content-num p {
+    font-size: 17.5px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 30px;
+}
+.answers p {
+    font-size: 20px;
+}
+.answers-sec a {
+    margin-right: 10px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/** FOOTER SECTION **/
+.footer-sec {
+    margin-left: -15px;
+}
+.copyright p:nth-child(2) {
+    margin-right: -90px;
+}
+/** END FOOTER SECTION **/
+}
+/**** END ANDROID DEVICES ***/
+
+/***** END EXTRA SMALL DEVICES *****/
+
+/**** SUPER EXTRA SMALL DEVICES *****/
+
+/* Samsung Galaxy S8 */
+@media(min-width: 321px) and (max-width: 360px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 50px;
+}
+.header-logo .logo {
+    margin-left: -25px;
+}
+#logo {
+    margin-top: -3px;
+    width: 100px;
+    height: 100px;
+} 
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 8%;
+    width: 300px;
+}
+form .field input {
+    height: 40px;
+    width: 230px;
+}
+form .message textarea {
+    width: 230px;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 310px;
+     height: 350px;
+     margin-left: 10px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6.5vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: -30px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: 5px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-right: 20px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: -30px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#about h1 {
+    font-size: 8vw;
+}
+.about h1 {
+    margin-left: 70px;
+    font-size: 2em;
+}
+.services-type h3 {
+    font-size: 30px;
+}
+.serve p {
+    font-size: 25px;
+}
+.services {
+    margin-left: 20px;
+}
+.about {
+    display: block;
+    text-align: center;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-type p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section h3 {
+    font-size: 30px;
+}
+.work-section p {
+    font-size: 25px;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+.connect h1 {
+    font-size: 1.8em;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+#reason h1:nth-child(2) {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.categories {
+    margin-left: 50px;
+}
+.card {
+    width: 250px;
+    height: 220px;
+}
+.card-text {
+    padding: 10px 20px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content p {
+    font-size: 25px;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 20px;
+}
+.answers p {
+    font-size: 25px;
+}
+.answers-sec a span {
+    margin-right: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/* FOOTER SECTION */
+#logo-two {
+    width: 200px;
+    height: 200px;
+    margin-left: -40px;
+}
+.footer-categories {
+    display: block;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: -40px;
+}
+.footer-categories ul:nth-child(2) {
+    margin-left: 20px;
+}
+.owner {
+    margin-left: -30px;
+}
+.owner-text {
+    margin-left: 10px;
+}
+.owner-text p:nth-child(1) {
+    font-size: 25px;
+}
+.mail {
+    margin-left: -30px; 
+    display: flex;
+}
+.mail h4 {
+    font-size: 25px;
+}
+.mail a {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 23px;
+}
+.copyright {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.copyright p:nth-child(1) {
+    margin-right: -80px;
+    margin-left: -50px;
+}
+.copyright p:nth-child(2) {
+    margin-right: -80px;
+    margin-left: -50px;
+}
+/* END FOOTER SECTION */
+}
+/* Samsung Galaxy S9 */
+@media(max-width: 320px) {
+/* HEADER SECTION */
+.header-logo nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 95px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 6;
+    margin-right: 0px;
+}
+.icons {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo ul {
+    display: block;
+    margin-right: 0px;
+}
+.header-logo nav.nav-hide {
+    left: -100%;
+    transition: .7s;
+}
+.header-logo nav.nav-show {
+    left: 0;
+    transition: .7s;
+}
+.header-logo nav ul li {
+    margin-top: 30px;
+}
+.toggle  {
+    display: block;
+    margin-right: 50px;
+}
+.header-logo .logo {
+    margin-left: -25px;
+}
+#logo {
+    margin-top: -3px;
+    width: 100px;
+    height: 100px;
+} 
+/* END HEADER SECTION */
+
+/* BODY SECTION */
+
+/* CONTACT FORM */
+.wrapper {
+    left: 3%;
+    width: 280px;
+}
+form .field input {
+    height: 40px;
+    width: 210px;
+}
+form .message textarea {
+    width: 210px;
+}
+/* END CONTACT FORM */
+
+/** HOME PAGE **/
+.describe {
+    display: none;
+ }
+ .describe-part {
+     display: block;
+ }
+ .describe-text {
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 50px;
+ }
+ .describe-part img {
+     width: 290px;
+     height: 330px;
+     margin-left: 10px;
+     margin-top: 20px;
+ }
+ .describe-text h1 {
+     font-size: 6.5vw;
+     margin-right: 10px;
+ }
+ .describe-text p {
+     margin-left: -30px;
+ }
+ .button-go {
+     justify-content: right;
+     margin-right: -5px;
+ }
+ #started { 
+    width: 120px;
+ }
+ #demo { 
+    width: 120px;
+ }
+ .describe-two {
+     display: block;
+     margin-top: 30px;
+ }
+ .describe-text-two {
+     text-align: right;
+     margin-right: 20px;
+     margin-top: 10px;
+ }
+ .describe-two img {
+     width: 300px;
+     height: 280px;
+     margin-left: 20px;
+     margin-top: 20px;
+ }
+ .describe-text-two h1 {
+     font-size: 6vw;
+ }
+ .describe-text-two p {
+     margin-left: -30px;
+ }
+/** END HOME SECTION **/
+
+/** ABOUT SECTION **/
+#about p {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#about h1 {
+    font-size: 8vw;
+}
+.about h1 {
+    margin-left: 50px;
+    font-size: 2em;
+}
+.services-type h3 {
+    font-size: 30px;
+}
+.serve p {
+    font-size: 25px;
+}
+.services {
+    margin-left: 20px;
+}
+.about {
+    display: block;
+    text-align: center;
+}
+/** END ABOUT SECTION **/
+
+/** HOW IT WORKS SECTION **/
+.work-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: -10px;
+}
+.work-category {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.work-type:nth-child(2),.work-type:nth-child(3) {
+    margin-top: 30px;
+}
+.work-type p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.work-img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30px;
+}
+.work-section {
+    display: block;
+    justify-content: left;
+    margin-left: 30px;
+    width: 85%;
+}
+.work-section h3 {
+    font-size: 30px;
+}
+.work-section p {
+    font-size: 25px;
+}
+.work-section-text:nth-child(2),.work-section-text:nth-child(3) {
+    margin-left: 50px;
+}
+.connect h1 {
+    font-size: 1.8em;
+}
+/** END HOW IT WORKS SECTION **/
+
+/** BENEFITS SECTION **/
+#reason h1:nth-child(2) {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.categories {
+    margin-left: 30px;
+}
+.card {
+    width: 250px;
+    height: 220px;
+}
+.card-text {
+    padding: 10px 20px;
+}
+.content {
+    margin-left: 10px;
+}
+.content h1 {
+    font-size: 1.5em;
+}
+.content p {
+    font-size: 25px;
+}
+.content-num span {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+/** END BENEFITS SECTION **/
+
+/** FAQ'S SECTION **/
+.answers-sec {
+    margin-left: 20px;
+}
+.answers p {
+    font-size: 25px;
+}
+.answers-sec a span {
+    margin-right: 20px;
+}
+/** END FAQ'S SECTION **/
+
+/* END BODY SECTION */
+
+/* FOOTER SECTION */
+#logo-two {
+    width: 200px;
+    height: 200px;
+    margin-left: -50px;
+}
+.footer-categories {
+    display: block;
+    justify-content: center;
+    font-size: 25px;
+    margin-left: -50px;
+}
+.footer-categories ul:nth-child(2) {
+    margin-left: 20px;
+}
+.owner {
+    margin-left: -30px;
+}
+.owner-text {
+    margin-left: 10px;
+}
+.owner-text p:nth-child(1) {
+    font-size: 25px;
+}
+.mail {
+    margin-left: -30px; 
+    display: flex;
+}
+.mail h4 {
+    font-size: 25px;
+}
+.mail a {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 23px;
+}
+.copyright {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.copyright p:nth-child(1) {
+    margin-right: -70px;
+    margin-left: -50px;
+}
+.copyright p:nth-child(2) {
+    margin-right: -70px;
+    margin-left: -50px;
+}
+/* END FOOTER SECTION */
+}
+/**** END SUPER EXTRA SMALL DEVICES *****/
+
+/*** END MEDIA DEVICES *****/
