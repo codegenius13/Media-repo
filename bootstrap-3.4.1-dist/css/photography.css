@@ -1,3 +1,8 @@
+@media(max-width: 360px) {
+    body {
+        font-size: 15px;
+    }
+}
 @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
 *{
     margin: 0;
@@ -8,7 +13,7 @@
 }
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+    font-size: 16px;
     color: black;
 }
 img {
@@ -104,7 +109,7 @@ html {
     display: none;
     float: right;
     margin-top: 35px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .toggle i.open {
     display: block;
@@ -282,7 +287,7 @@ form .button-area button {
     margin-bottom: 30px;
 }
 .describe-text p {
-    font-size: 22px;
+    font-size: 16px;
 }
 .describe img {
     width: 700px;
@@ -327,7 +332,7 @@ form .button-area button {
     margin-bottom: 30px;
 }
 .describe-text-two p {
-    font-size: 22px;
+    font-size: 16px;
 }
 .describe-two img {
     width: 550px;
@@ -348,7 +353,7 @@ form .button-area button {
 }
 #about p {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 .about {
     margin-top: 10px;
@@ -374,7 +379,7 @@ form .button-area button {
 }
 .serve p {
     margin-left: 55px;
-    font-size: 20px;
+    font-size: 16px;
 }
 .services-type {
     display: flex;
@@ -483,14 +488,14 @@ form .button-area button {
     height: 10px;
     border: 1px solid black;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 16px;
 }
 .work-type h2 {
     font-weight: 600;
     font-size: 30px;
 }
 .work-type p {
-    font-size: 20px;
+    font-size: 16px;
     margin-right: 10px;
 }
 .work-btn {
@@ -499,7 +504,7 @@ form .button-area button {
     background-color: transparent;
     border: 1px solid black;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 10px;
     color: black;
 }
@@ -534,7 +539,7 @@ form .button-area button {
     margin-right: 40px;
 }
 .work-section-text p {
-    font-size: 20px;
+    font-size: 17px;
 }
 .work-section-text:nth-child(1) {
     margin-left: 50px;
@@ -563,7 +568,7 @@ form .button-area button {
     background-color: transparent;
     border: 1px solid white;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 10px;
     color: white;
 }
@@ -630,12 +635,12 @@ form .button-area button {
     height: 50px;
     border: 1px solid black;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 20px;
 }
 .content-num p {
     margin-top: 5px;
-    font-size: 23px;
+    font-size: 16px;
     margin-right: 20px;
 }
 /* END BENEFITS SECTION */
@@ -668,12 +673,12 @@ form .button-area button {
     justify-content: space-between;
 }
 .answers p {
-    font-size: 23px;
+    font-size: 16px;
     letter-spacing: 1px;
     margin-top: -5px;
 }
 .answers span {
-    font-size: 18px;
+    font-size: 16px;
     width: 30px;
     height: 30px;
     color: white;
@@ -718,7 +723,7 @@ form .button-area button {
     justify-content: center;
     align-items: center;
     padding: 10px 50px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .form-input {
     display: flex;
@@ -798,7 +803,7 @@ form .button-area button {
     border: 0;
     box-shadow: 0px 1px 5px 1px rgb(201, 198, 198);
     overflow: hidden;
-    font-size: 20px;
+    font-size: 16px;
 }
 .footer-sec {
     margin-top: 50px;
@@ -1350,7 +1355,7 @@ form .button-area button {
     margin-left: 50px;
 }
 .answers p {
-    font-size: 20px;
+    font-size: 16px;
 }
 /** END FAQ'S SECTION **/
 
@@ -1538,7 +1543,7 @@ form .button-area button {
     margin-left: 50px;
 }
 .answers p {
-    font-size: 20px;
+    font-size: 16px;
 }
 /** END FAQ'S SECTION **/
 
@@ -1739,7 +1744,7 @@ form .button-area button {
     margin-left: 50px;
 }
 .answers p {
-    font-size: 20px;
+    font-size: 16px;
 }
 /** END FAQ'S SECTION **/
 
@@ -1933,7 +1938,7 @@ form .button-area button {
     height: 40px;
 }
 .content-num p {
-    font-size: 17.5px;
+    font-size: 16px;
 }
 /** END BENEFITS SECTION **/
 
@@ -1942,7 +1947,7 @@ form .button-area button {
     margin-left: 50px;
 }
 .answers p {
-    font-size: 20px;
+    font-size: 16px;
 }
 /** END FAQ'S SECTION **/
 
@@ -2084,7 +2089,7 @@ form .message textarea {
 #about p {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 #about h1 {
     font-size: 8vw;
@@ -2097,7 +2102,7 @@ form .message textarea {
     font-size: 30px;
 }
 .serve p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .services {
     margin-left: 20px;
@@ -2129,7 +2134,7 @@ form .message textarea {
 .work-type p {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-img {
     justify-content: center;
@@ -2147,7 +2152,7 @@ form .message textarea {
     font-size: 30px;
 }
 .work-section p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-section-text:nth-child(2),.work-section-text:nth-child(3) {
     margin-left: 50px;
@@ -2179,7 +2184,7 @@ form .message textarea {
     font-size: 1.5em;
 }
 .content p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .content-num span {
     width: 40px;
@@ -2193,7 +2198,7 @@ form .message textarea {
     margin-left: 20px;
 }
 .answers p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .answers-sec a span {
     margin-right: 20px;
@@ -2211,7 +2216,7 @@ form .message textarea {
 .footer-categories {
     display: block;
     justify-content: center;
-    font-size: 30px;
+    font-size: 16px;
     margin-left: -20px;
 }
 .footer-categories ul:nth-child(2) {
@@ -2224,14 +2229,14 @@ form .message textarea {
     margin-left: 10px;
 }
 .owner-text p:nth-child(1) {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail {
     margin-left: -30px; 
     display: flex;
 }
 .mail h4 {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail a {
     margin-left: 5px;
@@ -2244,7 +2249,7 @@ form .message textarea {
     align-items: center;
     text-align: center;
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 30px;
 }
 .copyright p:nth-child(1) {
@@ -2380,7 +2385,7 @@ form .message textarea {
 #about p {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 #about h1 {
     font-size: 8vw;
@@ -2393,7 +2398,7 @@ form .message textarea {
     font-size: 30px;
 }
 .serve p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .services {
     margin-left: 20px;
@@ -2425,7 +2430,7 @@ form .message textarea {
 .work-type p {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-img {
     justify-content: center;
@@ -2443,7 +2448,7 @@ form .message textarea {
     font-size: 30px;
 }
 .work-section p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-section-text:nth-child(2),.work-section-text:nth-child(3) {
     margin-left: 50px;
@@ -2475,7 +2480,7 @@ form .message textarea {
     font-size: 1.5em;
 }
 .content p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .content-num span {
     width: 40px;
@@ -2489,7 +2494,7 @@ form .message textarea {
     margin-left: 20px;
 }
 .answers p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .answers-sec a span {
     margin-right: 20px;
@@ -2507,7 +2512,7 @@ form .message textarea {
 .footer-categories {
     display: block;
     justify-content: center;
-    font-size: 30px;
+    font-size: 16px;
     margin-left: -30px;
 }
 .footer-categories ul:nth-child(2) {
@@ -2520,14 +2525,14 @@ form .message textarea {
     margin-left: 10px;
 }
 .owner-text p:nth-child(1) {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail {
     margin-left: -30px; 
     display: flex;
 }
 .mail h4 {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail a {
     margin-left: 5px;
@@ -2540,7 +2545,7 @@ form .message textarea {
     align-items: center;
     text-align: center;
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 30px;
 }
 .copyright p:nth-child(1) {
@@ -2617,7 +2622,7 @@ form .message textarea {
 #about p {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 #about h1 {
     font-size: 8vw;
@@ -2630,7 +2635,7 @@ form .message textarea {
     font-size: 30px;
 }
 .serve p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .services {
     margin-left: 20px;
@@ -2662,7 +2667,7 @@ form .message textarea {
 .work-type p {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-img {
     justify-content: center;
@@ -2680,7 +2685,7 @@ form .message textarea {
     font-size: 30px;
 }
 .work-section p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-section-text:nth-child(2),.work-section-text:nth-child(3) {
     margin-left: 50px;
@@ -2712,7 +2717,7 @@ form .message textarea {
     font-size: 1.5em;
 }
 .content p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .content-num span {
     width: 40px;
@@ -2726,7 +2731,7 @@ form .message textarea {
     margin-left: 20px;
 }
 .answers p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .answers-sec a span {
     margin-right: 20px;
@@ -2744,7 +2749,7 @@ form .message textarea {
 .footer-categories {
     display: block;
     justify-content: center;
-    font-size: 30px;
+    font-size: 16px;
     margin-left: -20px;
 }
 .footer-categories ul:nth-child(2) {
@@ -2757,14 +2762,14 @@ form .message textarea {
     margin-left: 10px;
 }
 .owner-text p:nth-child(1) {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail {
     margin-left: -30px; 
     display: flex;
 }
 .mail h4 {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail a {
     margin-left: 5px;
@@ -2777,7 +2782,7 @@ form .message textarea {
     align-items: center;
     text-align: center;
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 30px;
 }
 .copyright p:nth-child(1) {
@@ -2978,7 +2983,7 @@ form .message textarea {
     margin-left: 30px;
 }
 .answers p {
-    font-size: 20px;
+    font-size: 16px;
 }
 .answers-sec a {
     margin-right: 10px;
@@ -3125,7 +3130,7 @@ form .message textarea {
 #about p {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 #about h1 {
     font-size: 8vw;
@@ -3138,7 +3143,7 @@ form .message textarea {
     font-size: 30px;
 }
 .serve p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .services {
     margin-left: 20px;
@@ -3170,7 +3175,7 @@ form .message textarea {
 .work-type p {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-img {
     justify-content: center;
@@ -3188,7 +3193,7 @@ form .message textarea {
     font-size: 30px;
 }
 .work-section p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-section-text:nth-child(2),.work-section-text:nth-child(3) {
     margin-left: 50px;
@@ -3220,7 +3225,7 @@ form .message textarea {
     font-size: 1.5em;
 }
 .content p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .content-num span {
     width: 40px;
@@ -3234,7 +3239,7 @@ form .message textarea {
     margin-left: 20px;
 }
 .answers p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .answers-sec a span {
     margin-right: 20px;
@@ -3252,7 +3257,7 @@ form .message textarea {
 .footer-categories {
     display: block;
     justify-content: center;
-    font-size: 30px;
+    font-size: 16px;
     margin-left: -40px;
 }
 .footer-categories ul:nth-child(2) {
@@ -3265,14 +3270,14 @@ form .message textarea {
     margin-left: 10px;
 }
 .owner-text p:nth-child(1) {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail {
     margin-left: -30px; 
     display: flex;
 }
 .mail h4 {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail a {
     margin-left: 5px;
@@ -3285,7 +3290,7 @@ form .message textarea {
     align-items: center;
     text-align: center;
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 30px;
 }
 .copyright p:nth-child(1) {
@@ -3427,7 +3432,7 @@ form .message textarea {
 #about p {
     margin-right: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 #about h1 {
     font-size: 8vw;
@@ -3440,7 +3445,7 @@ form .message textarea {
     font-size: 30px;
 }
 .serve p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .services {
     margin-left: 20px;
@@ -3472,7 +3477,7 @@ form .message textarea {
 .work-type p {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-img {
     justify-content: center;
@@ -3490,7 +3495,7 @@ form .message textarea {
     font-size: 30px;
 }
 .work-section p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .work-section-text:nth-child(2),.work-section-text:nth-child(3) {
     margin-left: 50px;
@@ -3522,7 +3527,7 @@ form .message textarea {
     font-size: 1.5em;
 }
 .content p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .content-num span {
     width: 40px;
@@ -3536,7 +3541,7 @@ form .message textarea {
     margin-left: 20px;
 }
 .answers p {
-    font-size: 25px;
+    font-size: 16px;
 }
 .answers-sec a span {
     margin-right: 20px;
@@ -3554,7 +3559,7 @@ form .message textarea {
 .footer-categories {
     display: block;
     justify-content: center;
-    font-size: 25px;
+    font-size: 16px;
     margin-left: -50px;
 }
 .footer-categories ul:nth-child(2) {
@@ -3567,14 +3572,14 @@ form .message textarea {
     margin-left: 10px;
 }
 .owner-text p:nth-child(1) {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail {
     margin-left: -30px; 
     display: flex;
 }
 .mail h4 {
-    font-size: 25px;
+    font-size: 16px;
 }
 .mail a {
     margin-left: 5px;
@@ -3587,7 +3592,7 @@ form .message textarea {
     align-items: center;
     text-align: center;
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 30px;
 }
 .copyright p:nth-child(1) {

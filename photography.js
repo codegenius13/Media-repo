@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
    // END STICKY HEADER ON SCROLL TOP
 
    // NAV MENU ACTIVE
-   var li = document.querySelectorAll(".links");
+   /*var li = document.querySelectorAll(".links");
    var sec = document.querySelectorAll(".sections");
    function activeMenu() {
       let len = sec.length;
@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
       li[len].classList.add("active");
    };
    activeMenu();
-   window.addEventListener("scroll", activeMenu);
+   window.addEventListener("scroll", activeMenu);*/
    // END NAV MENU ACTIVE
 
    // MENU BAR 
