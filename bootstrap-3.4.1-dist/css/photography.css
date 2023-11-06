@@ -20,9 +20,6 @@ img {
     width: 300px;
     height: 300px;
 }
-html {
-    scroll-behavior: smooth;
-}
 /* HEADER SECTION */
 .header-nav {
     width: 100%;
@@ -390,6 +387,7 @@ form .button-area button {
 }
 .services-type h3 {
     text-transform: uppercase;
+    font-size: 18px;
 }
 .services-type img {
     width: 30px;
@@ -469,6 +467,7 @@ form .button-area button {
     position: relative;
     width: 100%;
     margin: 100px auto;
+    overflow: hidden;
 }
 .wrap nav{
     display: flex;
@@ -489,7 +488,7 @@ form .button-area button {
     border: 1px solid black;
     transition: all 0.3s ease;
 }
-.items span.active,
+.items span.shuffle,
 .items span:hover{
     color: white;
     background: black;
@@ -513,7 +512,8 @@ form .button-area button {
 } 
 
 .gal .image img{
-    width: 100%;
+    width: 350px;
+    height: 200px;
     vertical-align: middle;
     transition: all 0.3s ease;
 }
@@ -551,7 +551,67 @@ form .button-area button {
       transform: scale(1);
     }
 }
-  
+.preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+.preview-box .details{
+    padding: 13px 15px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+}
+.details .title p{
+    font-weight: 500;
+    margin-left: 5px;
+}
+.details .icon-x{
+    font-style: 22px;
+    cursor: pointer;
+}
+.preview-box .image-box{
+    width: 100%;
+    display: flex;
+}
+.image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+.shadow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+    display: block;
+}
 /* END OUR PROJECTS SECTION */
 
 /* HOW IT WORKS SECTION */
@@ -1683,14 +1743,13 @@ form .button-area button {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content-num span {
     width: 40px;
     height: 40px;
 }
 .content-num p {
-    font-size: 17.5px;
     margin-top: 5px;
 }
 /** END BENEFITS SECTION **/
@@ -1879,7 +1938,7 @@ form .button-area button {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content-num span {
     width: 40px;
@@ -2119,7 +2178,7 @@ form .message textarea {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content p {
     font-size: 16px;
@@ -2361,7 +2420,7 @@ form .message textarea {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content p {
     font-size: 16px;
@@ -2544,7 +2603,7 @@ form .message textarea {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content p {
     font-size: 16px;
@@ -2744,14 +2803,13 @@ form .message textarea {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content-num span {
     width: 40px;
     height: 40px;
 }
 .content-num p {
-    font-size: 17.5px;
     margin-top: 5px;
 }
 /** END BENEFITS SECTION **/
@@ -2993,7 +3051,7 @@ form .message textarea {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content p {
     font-size: 16px;
@@ -3241,7 +3299,7 @@ form .message textarea {
     margin-left: 10px;
 }
 .content h1 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .content p {
     font-size: 16px;
